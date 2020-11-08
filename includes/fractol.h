@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpataki <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/08 15:58:46 by tglandai          #+#    #+#             */
-/*   Updated: 2018/10/11 13:13:06 by tglandai         ###   ########.fr       */
+/*   Created: 2020/08/08 15:58:46 by cpataki           #+#    #+#             */
+/*   Updated: 2020/09/30 13:13:06 by cpataki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # include "../minilibx_macos/mlx.h"
 # include <math.h>
 # include <pthread.h>
-# define WIDTH 600
+# define WIDTH 700
 # define THREAD_WIDTH 5
-# define THREAD_NUMBER 120
+# define THREAD_NUMBER 140
 
 typedef struct	s_fractol
 {

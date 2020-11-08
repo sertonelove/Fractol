@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpataki <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/11 20:00:26 by tglandai          #+#    #+#             */
-/*   Updated: 2018/10/11 11:46:58 by tglandai         ###   ########.fr       */
+/*   Created: 2020/08/11 20:00:26 by cpataki           #+#    #+#             */
+/*   Updated: 2020/09/11 11:46:58 by cpataki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int		key_hook2(int keycode, t_fractol *data)
 		data->julia_mouse = !data->julia_mouse;
 	else if (keycode == 34)
 		data->show_text = !data->show_text;
+    else if (keycode == 21 && (data->fract - 1 >= 0))
+        data->fract--;
+	else if (keycode == 22 && (data->fract + 1 <= 2))
+	    data->fract++;
 	return (0);
 }
 

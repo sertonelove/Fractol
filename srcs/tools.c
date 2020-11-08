@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpataki <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/13 17:06:07 by tglandai          #+#    #+#             */
-/*   Updated: 2016/12/14 15:32:36 by tglandai         ###   ########.fr       */
+/*   Created: 2020/08/13 17:06:07 by cpataki           #+#    #+#             */
+/*   Updated: 2020/09/14 15:32:36 by cpataki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	put_text(t_fractol *data)
 
 	nb = ft_itoa(data->it_max);
 	text = ft_strjoin("iterations : ", nb);
+//	keys = "next fractal: 6, previous: 4";
+//	init_place = "init first place: space";
 	mlx_string_put(data->mlx, data->win, 10, 10, 0xFFFFFF, text);
 	ft_strdel(&text);
 	ft_strdel(&nb);

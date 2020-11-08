@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mandelbrot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tglandai <tglandai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cpataki <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/11 13:42:53 by tglandai          #+#    #+#             */
-/*   Updated: 2018/10/11 13:10:40 by tglandai         ###   ########.fr       */
+/*   Created: 2020/08/11 13:42:53 by cpataki           #+#    #+#             */
+/*   Updated: 2020/10/11 13:10:40 by cpataki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	mandelbrot_init(t_fractol *data)
 {
 	data->it_max = 50;
-	data->zoom = 300;
+	data->zoom = 250;
 	data->x1 = -2.05;
 	data->y1 = -1.3;
 	data->color = 265;
