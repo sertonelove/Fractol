@@ -46,7 +46,7 @@ void	mandelbrot_calc(t_fractol *data)
 void	*mandelbrot(void *tab)
 {
 	t_fractol	*data;
-	int		tmp;
+	int			tmp;
 
 	data = (t_fractol *)tab;
 	data->x = 0;

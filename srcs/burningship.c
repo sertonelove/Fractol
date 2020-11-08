@@ -44,7 +44,7 @@ void	burningship_calc(t_fractol *data)
 
 void	*burningship(void *tab)
 {
-	int		tmp;
+	int			tmp;
 	t_fractol	*data;
 
 	data = (t_fractol *)tab;

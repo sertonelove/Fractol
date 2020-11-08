@@ -15,17 +15,19 @@
 int		key_hook2(int keycode, t_fractol *data)
 {
 	if (keycode == 19)
-		data->color = 2050;
+		data->color = 1800;
 	else if (keycode == 20)
 		data->color = 265;
+	else if (keycode == 24)
+		data->color += 50;
 	else if (keycode == 35)
 		data->julia_mouse = !data->julia_mouse;
 	else if (keycode == 34)
 		data->show_text = !data->show_text;
-    else if (keycode == 21 && (data->fract - 1 >= 0))
-        data->fract--;
+	else if (keycode == 21 && (data->fract - 1 >= 0))
+		data->fract--;
 	else if (keycode == 22 && (data->fract + 1 <= 4))
-	    data->fract++;
+		data->fract++;
 	return (0);
 }
 
@@ -48,7 +50,7 @@ int		key_hook(int keycode, t_fractol *data)
 	else if (keycode == 49)
 		fract_init(data);
 	else if (keycode == 18)
-		data->color = 1677216;
+		data->color = 3677216;
 	key_hook2(keycode, data);
 	fract_calc(data);
 	return (0);
@@ -64,7 +66,7 @@ void	ft_zoom(int x, int y, t_fractol *data)
 
 void	ft_dezoom(int x, int y, t_fractol *data)
 {
-	data->x1 = (x / data->zoom + data->x1)  - (x / (data->zoom / 1.3));
+	data->x1 = (x / data->zoom + data->x1) - (x / (data->zoom / 1.3));
 	data->y1 = (y / data->zoom + data->y1) - (y / (data->zoom / 1.3));
 	data->zoom /= 1.3;
 	data->it_max--;

@@ -57,7 +57,7 @@ void	julia_calc(t_fractol *data)
 
 void	*julia(void *tab)
 {
-	int		tmp;
+	int			tmp;
 	t_fractol	*data;
 
 	data = (t_fractol *)tab;
