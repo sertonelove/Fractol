@@ -24,7 +24,7 @@ int		key_hook2(int keycode, t_fractol *data)
 		data->show_text = !data->show_text;
     else if (keycode == 21 && (data->fract - 1 >= 0))
         data->fract--;
-	else if (keycode == 22 && (data->fract + 1 <= 2))
+	else if (keycode == 22 && (data->fract + 1 <= 4))
 	    data->fract++;
 	return (0);
 }

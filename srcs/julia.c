@@ -26,7 +26,7 @@ int		mouse_julia(int x, int y, t_fractol *data)
 void	julia_init(t_fractol *data)
 {
 	data->it_max = 50;
-	data->zoom = 200;
+	data->zoom = 180;
 	data->x1 = -2.0;
 	data->y1 = -1.9;
 	data->color = 265;

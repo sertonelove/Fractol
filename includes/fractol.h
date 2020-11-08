@@ -61,6 +61,16 @@ void			mandelbrot_calc(t_fractol *data);
 void			*mandelbrot(void *tab);
 void			mandelbrot_pthread(t_fractol *data);
 
+void	duobrot_init(t_fractol *data);
+void	duobrot_calc(t_fractol *data);
+void	*duobrot(void *tab);
+void	duobrot_pthread(t_fractol *data);
+
+void	tribrot_init(t_fractol *data);
+void	tribrot_calc(t_fractol *data);
+void	*tribrot(void *tab);
+void	tribrot_pthread(t_fractol *data);
+
 int				mouse_julia(int x, int y, t_fractol *data);
 void			julia_init(t_fractol *data);
 void			julia_calc(t_fractol *data);

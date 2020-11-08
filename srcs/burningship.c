@@ -15,7 +15,7 @@
 void	burningship_init(t_fractol *data)
 {
 	data->it_max = 50;
-	data->zoom = 220;
+	data->zoom = 200;
 	data->x1 = -2.2;
 	data->y1 = -2.5;
 	data->color = 265;

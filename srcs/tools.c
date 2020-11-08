@@ -35,8 +35,7 @@ void	put_text(t_fractol *data)
 
 	nb = ft_itoa(data->it_max);
 	text = ft_strjoin("iterations : ", nb);
-//	keys = "next fractal: 6, previous: 4";
-//	init_place = "init first place: space";
+	text = ft_strjoin(text, "; next : 6; previous : 4; change color : 1, 2, 3");
 	mlx_string_put(data->mlx, data->win, 10, 10, 0xFFFFFF, text);
 	ft_strdel(&text);
 	ft_strdel(&nb);

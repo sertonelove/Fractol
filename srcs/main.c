@@ -22,6 +22,10 @@ void	fract_calc(t_fractol *data)
 		julia_pthread(data);
 	else if (data->fract == 2)
 		burningship_pthread(data);
+    else if (data->fract == 3)
+        duobrot_pthread(data);
+    else if (data->fract == 4)
+        tribrot_pthread(data);
 	if (data->show_text)
 		put_text(data);
 }
@@ -34,6 +38,10 @@ void	fract_init(t_fractol *data)
 		julia_init(data);
 	else if (data->fract == 2)
 		burningship_init(data);
+    else if (data->fract == 3)
+        duobrot_init(data);
+    else if (data->fract == 4)
+        tribrot_init(data);
 	fract_calc(data);
 }
 
@@ -54,9 +62,13 @@ int		fract_comp(char **av, t_fractol *data)
 		data->fract = 1;
 	else if (ft_strcmp(av[1], "burningship") == 0)
 		data->fract = 2;
+    else if (ft_strcmp(av[1], "duobrot") == 0)
+        data->fract = 3;
+    else if (ft_strcmp(av[1], "tribrot") == 0)
+        data->fract = 4;
 	else
 	{
-		ft_putendl("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\"");
+		ft_putendl("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\", \"duobrot\", \"tribrot\"");
 		return (0);
 	}
 	return (1);
@@ -74,13 +86,13 @@ int		main(int ac, char **av)
 		if ((fract_comp(av, data)) == 0)
 			return (0);
 		fract_init(data);
-		mlx_hook(data->win, 6, 1L < 6, mouse_julia, data);
-		mlx_hook(data->win, 17, 0L, ft_close, data);
+		mlx_hook(data->win, 6, 0, mouse_julia, data);
+		mlx_hook(data->win, 17, 0, ft_close, data);
 		mlx_key_hook(data->win, key_hook, data);
 		mlx_mouse_hook(data->win, mouse_hook, data);
 		mlx_loop(data->mlx);
 	}
 	else
-		ft_putendl("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\"");
+		ft_putendl("Usage /fractol \"mandelbrot\", \"julia\", \"burningship\", \"duobrot\", \"tribrot\"");
 	return (0);
 }
