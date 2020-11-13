@@ -6,7 +6,7 @@
 #    By: cpataki <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 16:14:06 by cpataki           #+#    #+#              #
-#    Updated: 2020/02/03 18:26:56 by cpataki          ###   ########.fr        #
+#    Updated: 2020/11/13 13:59:43 by cpataki          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,17 +88,17 @@ OBJECTS = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS) ./includes
-	ar rc $(NAME) $(OBJECTS)
+	@ar rc $(NAME) $(OBJECTS)
 #	ranlib $(NAME)
 
 %.o:%.c
-	gcc $(CFLAGS) $< -o $@
+	@gcc $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJECTS)
+	@rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
