@@ -36,9 +36,9 @@ int		key_hook(int keycode, t_fractol *data)
 	if (keycode == 53)
 		exit(1);
 	else if (keycode == 69)
-		data->it_max += 50;
+		data->it_max += 10;
 	else if (keycode == 78)
-		data->it_max -= 50;
+		data->it_max -= 10;
 	else if (keycode == 123)
 		data->x1 -= 30 / data->zoom;
 	else if (keycode == 124)
